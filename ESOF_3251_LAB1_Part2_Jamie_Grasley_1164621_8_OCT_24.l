@@ -1,6 +1,6 @@
 /*Jamie Grasley #1164621 on MacOS*/
 %{
-#include "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.h"
+#include "ESOF_3251_LAB1_Part2_Jamie_Grasley_1164621_8_OCT_24.tab.h"
 #include <stdio.h>
 #include <stdio.h>
 #include <stdlib.h>
