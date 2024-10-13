@@ -1,44 +1,51 @@
 %{
-  char str[100];
-  int yyerror(char *errormsg);
-  int yyparse();
+#include "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.h"
+#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int yyparse(void);
+char str[1024];
 %}
-  
-%%
-
-("+")"\n"                {printf("operator: + \n");}
-("-")"\n"                {{printf("operator: - \n");}}
-("*")"\n"                {printf("operator: * \n");}
-("/")"\n"                {printf("operator: / \n");}
-("=")"\n"                {printf("operator: = \n");}
-("<")"\n"                {printf("operator: < \n");}
-(">")"\n"                {printf("operator: > \n");}
-("<=")"\n"               {printf("operator: <= \n");}
-(">=")"\n"               {printf("operator: >= \n");}
-("==")"\n"               {printf("operator: == \n");}
-("!=")"\n"               {printf("opßerator: != \n");}
-("(")"\n"                {printf("parenthesis: ( \n");}
-(")")"\n"                {printf("parenthesis: ) \n");}
-(";")"\n"                {printf("semicolon: ; \n");}
-("if")"\n"               {printf("keyword: if \n");}
-("then")"\n"             {printf("keyword: then \n");}
-("print")"\n"            {printf("keyword: print \n");}
-("newline")"\n"          {printf("keyword: newline \n");}
- \/\/[^"\n"]*            {printf("\n");}
-[0-9]+                   {printf("integer: %s\n",yytext);}
-[a-zA-Z][a-zA-Z0-9]*     {printf("id: %s\n",yytext);}
+%% 
+[ \t]+               {}
+"//".*               {}
+("+")                {return ADD;}
+("-")                {return SUB;}
+("*")                {return MULT;}
+("/")                {return DIV;}
+("<")                {return LES;}
+(">")                {return GRE;}
+("<=")               {return LEQ;}
+(">=")               {return GEQ;}
+("==")               {return COMP;}
+("!=")               {return NEQ;}
+("(")                {return LBR;}
+(")")                {return RBR;}
+(";")                {return SEMICOLON;}
+("if")               {return IF;}
+("then")             {return THEN;}
+("else")             {return ELSE;}
+("print")            {return PRINT;}
+("newline")          {return NEWLINE;}
+("stop")             {return STOP;}
+("endif")            {return ENDIF;}
+[0-9]+               {yylval.intval = atoi(yytext); return INT;}
 
 \"[^\"]*\" {
-strncpy(str, &(yytext[1]), strlen(yytext)-2);
-str[strlen(yytext)-2] = (char) 0; {printf("quoted string: %s\n",str);}
+    strncpy(str, &(yytext[1]), strlen(yytext)-2);
+    str[strlen(yytext)-2] = (char) 0;
+    yylval.strval = strdup(str);
+    return STR;
 }
-
-
-.                     { yyerror("Unknow char");  }
+\n
+.                       
 
 %%
 
-int main(void)
+
+
+int main()
 {
      yyparse();
      return 0;
@@ -46,11 +53,5 @@ int main(void)
 
 int yywrap(void)
 {
-     return 0;
-}
-
-int yyerror(char *errormsg)
-{
-      fprintf(stderr, "%s\n", errormsg);
-      exit(1);
+     return 1;
 }
