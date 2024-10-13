@@ -92,10 +92,10 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 47 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 51 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
 {
-    int intval;
-    char* strval;
+    int intval; //Store int values
+    char* strval; //Store string values
 }
 /* Line 1529 of yacc.c.  */
 #line 102 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.h"

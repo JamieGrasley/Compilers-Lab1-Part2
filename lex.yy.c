@@ -477,7 +477,8 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
-#line 2 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+/*Jamie Grasley #1164621 on MacOS*/
+#line 3 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 #include "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.h"
 #include <stdio.h>
 #include <stdio.h>
@@ -485,8 +486,8 @@ char *yytext;
 #include <string.h>
 int yyparse(void);
 char str[1024];
-#line 488 "lex.yy.c"
 #line 489 "lex.yy.c"
+#line 490 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -703,9 +704,9 @@ YY_DECL
 		}
 
 	{
-#line 10 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 11 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 
-#line 708 "lex.yy.c"
+#line 709 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -764,129 +765,129 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 11 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 12 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 12 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 13 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 13 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
-{return ADD;}
+#line 14 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+{return ADD;}/*Token handling*/
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 14 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 15 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return SUB;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 15 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 16 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return MULT;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 16 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 17 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return DIV;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 17 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 18 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return LES;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 18 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 19 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return GRE;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 19 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 20 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return LEQ;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 20 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 21 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return GEQ;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 21 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 22 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return COMP;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 22 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 23 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return NEQ;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 23 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 24 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return LBR;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 24 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 25 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return RBR;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 25 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 26 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return SEMICOLON;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 26 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 27 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return IF;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 27 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 28 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return THEN;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 28 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 29 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return ELSE;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 29 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 30 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return PRINT;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 30 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 31 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return NEWLINE;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 31 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 32 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return STOP;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 32 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 33 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {return ENDIF;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 33 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 34 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 {yylval.intval = atoi(yytext); return INT;}
 	YY_BREAK
 case 24:
 /* rule 24 can match eol */
 YY_RULE_SETUP
 #line 35 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
-{
+{ 
     strncpy(str, &(yytext[1]), strlen(yytext)-2);
     str[strlen(yytext)-2] = (char) 0;
     yylval.strval = strdup(str);
     return STR;
-}
+}/*String Handling*/
 	YY_BREAK
 case 25:
 /* rule 25 can match eol */
@@ -897,14 +898,14 @@ YY_RULE_SETUP
 case 26:
 YY_RULE_SETUP
 #line 42 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
-
+{}/*Unrecognized input*/                   
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 44 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 43 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 ECHO;
 	YY_BREAK
-#line 907 "lex.yy.c"
+#line 908 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1909,7 +1910,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 44 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
+#line 43 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.l"
 
 
 

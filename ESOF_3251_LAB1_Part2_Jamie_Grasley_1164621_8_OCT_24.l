@@ -1,3 +1,4 @@
+/*Jamie Grasley #1164621 on MacOS*/
 %{
 #include "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.h"
 #include <stdio.h>
@@ -7,12 +8,10 @@
 int yyparse(void);
 char str[1024];
 %}
-%%
-/*Tab and comment handling*/
+%%/*Tab and comment handling*/
 [ \t]+               {}
 "//".*               {}
-/*Token handling*/
-("+")                {return ADD;}
+("+")                {return ADD;}/*Token handling*/
 ("-")                {return SUB;}
 ("*")                {return MULT;}
 ("/")                {return DIV;}
@@ -33,16 +32,14 @@ char str[1024];
 ("stop")             {return STOP;}
 ("endif")            {return ENDIF;}
 [0-9]+               {yylval.intval = atoi(yytext); return INT;}
-/*String Handling*/
 \"[^\"]*\" { 
     strncpy(str, &(yytext[1]), strlen(yytext)-2);
     str[strlen(yytext)-2] = (char) 0;
     yylval.strval = strdup(str);
     return STR;
-}
+}/*String Handling*/
 \n
-.  /*Unrecognized input*/                    
-
+. {}/*Unrecognized input*/                   
 %%
 
 

@@ -118,7 +118,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 2 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
 
 
 #include <stdio.h>
@@ -128,11 +128,12 @@
 extern int yylex();  
 extern int yyparse(); 
 extern void yyerror(const char *s);
+//Stack size is arbitrary
 #define SIZE 5
-int count = 0;
-int stack[SIZE]={1};
+int count = 0;//Conter for the stack
+int stack[SIZE]={1}; //Set the top value in the stack to 1 so top() works correctly
 
-
+//Push onto the stack
 void push(int value){
 if(count<SIZE){
         count++;
@@ -143,6 +144,7 @@ else{
         printf("Stack full");
 }
 }
+//Pop off the stack, return -1 if empty because otherwise it would always return true or false
 int pop(){
 if(count>=0){
 
@@ -153,6 +155,7 @@ else{
         return -1;
 }
 }
+//Check the top of the stack, return -1 if empty because otherwise it would always return true or false
 int top(){
 if(count>=0){
         return stack[count];
@@ -185,13 +188,13 @@ else{
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 47 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 51 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
 {
-    int intval;
-    char* strval;
+    int intval; //Store int values
+    char* strval; //Store string values
 }
 /* Line 193 of yacc.c.  */
-#line 195 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
+#line 198 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -204,7 +207,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 208 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
+#line 211 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
 
 #ifdef short
 # undef short
@@ -499,10 +502,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    69,    69,    73,    74,    77,    78,    79,    80,    81,
-      84,    84,    85,    85,    84,    91,    92,    95,    98,    99,
-     100,   101,   102,   103,   104,   105,   106,   107,   108,   109,
-     114
+       0,    70,    70,    74,    75,    78,    79,    80,    81,    82,
+      85,    85,    86,    86,    85,    93,    94,    97,   100,   101,
+     102,   103,   104,   105,   106,   107,   108,   109,   110,   111,
+     116
 };
 #endif
 
@@ -1447,108 +1450,108 @@ yyreduce:
   switch (yyn)
     {
         case 10:
-#line 84 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 85 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {top()==1 ? push((yyvsp[(2) - (3)].intval)!=0) : push(0);;}
     break;
 
   case 11:
-#line 84 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 85 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {pop();;}
     break;
 
   case 12:
-#line 85 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 86 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {top()==1 ? push((yyvsp[(2) - (7)].intval)==0) : push(0);;}
     break;
 
   case 13:
-#line 85 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 86 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {pop();;}
     break;
 
   case 15:
-#line 91 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 93 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {if (top() == 1){printf("%s\n", (yyvsp[(2) - (3)].strval));};}
     break;
 
   case 16:
-#line 92 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 94 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {if (top() == 1){printf("%d\n", (yyvsp[(2) - (3)].intval));};}
     break;
 
   case 17:
-#line 95 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 97 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {if (top() == 1){printf("\n");};}
     break;
 
   case 18:
-#line 98 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 100 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = (yyvsp[(1) - (3)].intval) + (yyvsp[(3) - (3)].intval);;}
     break;
 
   case 19:
-#line 99 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 101 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = (yyvsp[(1) - (3)].intval) - (yyvsp[(3) - (3)].intval);;}
     break;
 
   case 20:
-#line 100 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 102 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = (yyvsp[(1) - (3)].intval) * (yyvsp[(3) - (3)].intval);;}
     break;
 
   case 21:
-#line 101 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 103 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = (yyvsp[(1) - (3)].intval) / (yyvsp[(3) - (3)].intval);;}
     break;
 
   case 22:
-#line 102 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 104 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) < (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 23:
-#line 103 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 105 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) > (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 24:
-#line 104 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 106 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) <= (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 25:
-#line 105 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 107 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) >= (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 26:
-#line 106 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 108 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) == (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 27:
-#line 107 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 109 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = ((yyvsp[(1) - (3)].intval) != (yyvsp[(3) - (3)].intval)) ? 1 : 0;;}
     break;
 
   case 28:
-#line 108 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 110 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval) = (yyvsp[(2) - (3)].intval);;}
     break;
 
   case 29:
-#line 109 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 111 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     {(yyval.intval)=(yyvsp[(1) - (1)].intval);;}
     break;
 
   case 30:
-#line 114 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 116 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
     { printf("Ending process\n"); exit(0); ;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1552 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
+#line 1555 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1762,9 +1765,9 @@ yyreturn:
 }
 
 
-#line 117 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
+#line 119 "ESOF_3251_LAB_Jamie_Grasley_1164621_8_OCT_24.y"
 
-
+//For error handling
  void yyerror(const char *s) {
     fprintf(stderr, "Error: %s\n", s);
 }
